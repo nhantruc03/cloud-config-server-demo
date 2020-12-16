@@ -8,7 +8,7 @@ eureka:
     hostname: localhost
 
 microservice:
-    db-service:
-        endpoints:
-            endpoint:
-                uri: http://db-service/get
+  db-service:
+    endpoints:
+      endpoint:
+        uri: http://db-service/get
