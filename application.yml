@@ -19,4 +19,4 @@ microservice:
             update:
                 uri: http://db-service/update
             delete:
-                uri: http://db-service/delete/   
+                uri: http://db-service/delete/
