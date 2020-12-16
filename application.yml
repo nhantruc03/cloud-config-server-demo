@@ -10,13 +10,5 @@ eureka:
 microservice:
     db-service:
         endpoints:
-            list:
+            endpoint:
                 uri: http://db-service/get
-            create:
-                uri: http://db-service/create
-            get:
-                uri: http://db-service/getbyid/
-            update:
-                uri: http://db-service/update
-            delete:
-                uri: http://db-service/delete/
