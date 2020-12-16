@@ -1,0 +1,22 @@
+eureka:
+  client:
+    register-with-eureka: true
+     fetch-registry: true
+     service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+   
+microservice:
+    db-service:
+        endpoints:
+            list:
+                uri: http://db-service/get
+            create:
+                uri: http://db-service/create
+            get:
+                uri: http://db-service/getbyid/
+            update:
+                uri: http://db-service/update
+            delete:
+                uri: http://db-service/delete/   
