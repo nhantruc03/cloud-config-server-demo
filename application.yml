@@ -7,6 +7,16 @@ eureka:
   instance:
     hostname: localhost
 
-test:
-  test:
-    uri: http://db-service/get
+microservice:
+    db-service:
+        endpoints:
+            endpoint:
+                uri: http://db-service/get
+            create:
+                uri: http://db-service/create
+            get:
+                uri: http://db-service/getbyid/
+            update:
+                uri: http://db-service/update
+            delete:
+                uri: http://db-service/delete/
