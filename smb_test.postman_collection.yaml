@@ -1,0 +1,166 @@
+openapi: 3.0.3
+info:
+  title: smb_test
+  version: 1.0.0
+  contact: {}
+servers:
+- url: http://10.53.121.41
+paths:
+  /zgw/sAuto/authenticate:
+    post:
+      summary: authenticate
+      description: authenticate
+      operationId: authenticate
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  example: P4ssw0rd
+                username:
+                  type: string
+                  example: smbauto2
+            example:
+              password: P4ssw0rd
+              username: smbauto2
+      responses:
+        '200':
+          description: authenticate
+          headers:
+            Access-Control-Allow-Credentials:
+              schema:
+                type: string
+                example: 'true'
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: Content-Type, Accept, X-Requested-With, remember-me
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: POST, GET, OPTIONS, DELETE, HEAD, PATCH, PUT
+            Access-Control-Max-Age:
+              schema:
+                type: string
+                example: '3600'
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, no-store, max-age=0, must-revalidate
+            Content-Language:
+              schema:
+                type: string
+                example: en-US
+            Date:
+              schema:
+                type: string
+                example: Wed, 22 Mar 2023 06:40:17 GMT
+            Expires:
+              schema:
+                type: string
+                example: '0'
+            Pragma:
+              schema:
+                type: string
+                example: no-cache
+            Transfer-Encoding:
+              schema:
+                type: string
+                example: chunked
+            Vary:
+              schema:
+                type: string
+                example: Access-Control-Request-Headers
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-Frame-Options:
+              schema:
+                type: string
+                example: DENY
+            X-Powered-By:
+              schema:
+                type: string
+                example: Servlet/3.0
+            X-RateLimit-Limit:
+              schema:
+                type: string
+                example: '500'
+            X-RateLimit-Quota:
+              schema:
+                type: string
+                example: '20000'
+            X-RateLimit-Remaining:
+              schema:
+                type: string
+                example: '499'
+            X-RateLimit-Remaining-Quota:
+              schema:
+                type: string
+                example: '20000'
+            X-RateLimit-Reset:
+              schema:
+                type: string
+                example: '60000'
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: 1; mode=block
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  body:
+                    type: object
+                    properties:
+                      data:
+                        type: object
+                        properties:
+                          token:
+                            type: string
+                            example: eyJhbGciOiJSUzI1NiJ9.eyJjbGkiOm51bGwsInN1YiI6InNtYmF1dG8iLCJleHAiOjE2Nzk0NjkwMTgsImlhdCI6MTY3OTQ2NzIxOH0.orNWf3V8QE35PNsmDTXrDjkrMrhaChMXSAieCNdFNQy_eIMjYGQLly0mPcQJ1KKWViX6T9YnuYuyDv00_cl7aUYGxyOnWggsRw3UYuRuFFIbRC32ojQeFVN5oQxUdrG5QQud9N888qUpdbY1iS3aPC_DfsCMQnmgmQ1DOYfe_HQ
+                  header:
+                    type: object
+                    properties:
+                      errorDetail:
+                        nullable: true
+                        example: null
+                      message:
+                        type: string
+                        example: Thực thi thành công
+                      requestId:
+                        type: string
+                        example: 937e2436-5664-4566-a1f4-30d9a159f5fc
+                      source:
+                        type: string
+                        example: SAALEM
+                      status:
+                        type: number
+                        example: 0
+                      target:
+                        type: string
+                        example: SMB-AUTO
+                      timestamp:
+                        type: string
+                        example: Mar 22, 2023 1:40:18 PM
+              examples:
+                authenticate:
+                  value:
+                    body:
+                      data:
+                        token: eyJhbGciOiJSUzI1NiJ9.eyJjbGkiOm51bGwsInN1YiI6InNtYmF1dG8iLCJleHAiOjE2Nzk0NjkwMTgsImlhdCI6MTY3OTQ2NzIxOH0.orNWf3V8QE35PNsmDTXrDjkrMrhaChMXSAieCNdFNQy_eIMjYGQLly0mPcQJ1KKWViX6T9YnuYuyDv00_cl7aUYGxyOnWggsRw3UYuRuFFIbRC32ojQeFVN5oQxUdrG5QQud9N888qUpdbY1iS3aPC_DfsCMQnmgmQ1DOYfe_HQ
+                    header:
+                      errorDetail: null
+                      message: Thực thi thành công
+                      requestId: 937e2436-5664-4566-a1f4-30d9a159f5fc
+                      source: SAALEM
+                      status: 0
+                      target: SMB-AUTO
+                      timestamp: Mar 22, 2023 1:40:18 PM
+tags: []
+
